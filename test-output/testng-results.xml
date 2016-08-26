@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="11996" started-at="2016-08-26T03:07:42Z" finished-at="2016-08-26T03:07:54Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="11996" started-at="2016-08-26T03:07:42Z" finished-at="2016-08-26T03:07:54Z">
+      <class name="testCases.LandingPageParentSignUp">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@4de8b406]" name="openBrowser" is-config="true" duration-ms="7651" started-at="2016-08-26T08:37:42Z" finished-at="2016-08-26T08:37:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="enterValidParentEmailAndPassword()[pri:0, instance:testCases.LandingPageParentSignUp@4de8b406]" name="enterValidParentEmailAndPassword" duration-ms="4109" started-at="2016-08-26T08:37:50Z" finished-at="2016-08-26T08:37:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterValidParentEmailAndPassword -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@4de8b406]" name="closeBrowser" is-config="true" duration-ms="213" started-at="2016-08-26T08:37:54Z" finished-at="2016-08-26T08:37:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testCases.LandingPageParentSignUp -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
