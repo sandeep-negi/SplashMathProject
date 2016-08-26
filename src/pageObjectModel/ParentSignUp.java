@@ -1,5 +1,7 @@
 package pageObjectModel;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -17,6 +19,9 @@ public class ParentSignUp
 	private By userPassword = By.id("user_password");
 	private By signUpButton = By.id("signup-button");
 	
+	Logger logs;
+		
+	
 	
 	public ParentSignUp(WebDriver driver)
 	{
@@ -26,6 +31,9 @@ public class ParentSignUp
 
 	public void enterData(String email, String password) throws InterruptedException
 	{
+		logs = Logger.getLogger("ParentSignUp"); // Class name as an argument
+		PropertyConfigurator.configure("log4j.properties");	
+		
 		
 		pageElement = new VerifyElement(driver);
 		
@@ -33,20 +41,31 @@ public class ParentSignUp
 		Assert.assertTrue(elementStatus);
 				
 				driver.findElement(ParentSignUpButton).click();
-				System.out.println("Parent SignUp Button Clicked");
+				logs.info("Parent SignUp Button Clicked");
 				Thread.sleep(10);
 				
 				elementStatus= pageElement.isElementPresent(userEmail);
 				Assert.assertTrue(elementStatus);
+				logs.info("Email field visible");
+				
 				driver.findElement(userEmail).sendKeys(email);
+				logs.info("Entered user Email in Text field");
 				
 				elementStatus= pageElement.isElementPresent(userPassword);
 				Assert.assertTrue(elementStatus);
+				logs.info("Password field visible");
+				
 				driver.findElement(userPassword).sendKeys(password);
+				logs.info("Password Entered");
 				
 				elementStatus= pageElement.isElementPresent(signUpButton);
 				Assert.assertTrue(elementStatus);
+				logs.info("SignUp button visible");
+				
 				driver.findElement(signUpButton).click();
+				logs.info("clicked on SignUp Button");
+				
 				Thread.sleep(10);
+				logs.info("Waiting for 10sec");
 	}
 }

@@ -5,9 +5,10 @@
   <test name="Test">
     <classes>
       <class name="testCases.LandingPageParentSignUp">
-      <methods>
+ <!--     <methods>
       	<include name="enterValidParentEmailAndPassword"/>
       </methods>
+ -->
       </class>
     </classes>
   </test> <!-- Test -->
